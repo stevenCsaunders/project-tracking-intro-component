@@ -19,4 +19,31 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  margin: 7rem 0 3rem 0;
+  background-color: red;
+}
+.background-shape {
+  background-color: var(--light-grayish-blue);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 40vh;
+  border-bottom-left-radius: 10rem;
+  z-index: -1;
+}
+.logo img {
+  width: 75px;
+  height: 75px;
+}
+.top-nav {
+  
+}
+ul {
+  display: none;
+}

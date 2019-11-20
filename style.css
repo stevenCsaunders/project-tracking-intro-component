@@ -34,17 +34,15 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50vw;
-  height: 50vh;
-  border-bottom-left-radius: 10rem;
+  width: 50%;
+  height: 105vw;
+  max-height: 625px;
+  border-bottom-left-radius: 5rem;
   z-index: -1;
 }
 .logo img {
   width: 20px;
   height: 20px;
-}
-ul {
-  display: none;
 }
 /* MOBILE MENU STYLES */
 .hamburger-wrapper {
@@ -113,9 +111,13 @@ main {
   text-align: right;
 }
 .header-img img {
-  width: 90%;
-  
+  max-width: 100%;
 }
+.content { 
+  padding: 3rem;
+}
+
+
 
 @media all and (min-width: 769px){
   .hamburger-wrapper {

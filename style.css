@@ -24,6 +24,10 @@ html {
 h1, h2 {
   font-family: var(--secondary-font-family);
 }
+ul {
+  padding: 0;
+  margin: 0;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -32,6 +36,8 @@ header {
   padding: 1rem 3rem;
   margin: 1rem 0 3rem 0;
 }
+
+/* MOBILE STYLES */
 .background-shape {
   background-color: var(--light-grayish-blue);
   position: absolute;
@@ -47,72 +53,11 @@ header {
   width: 20px;
   height: 20px;
 }
-/* MOBILE MENU STYLES */
-.hamburger-wrapper {
-  position: relative;
-  width: 40px;
-  height: 40px;
-}
-.top-nav .menu-toggle {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 2;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  opacity: 0;
-}
-.top-nav .hamburger {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hamburger .lines {
-  position: relative;
-  width: 100%;
-  height: 2px;
-  background: var(--very-dark-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s ease;
-}
-.hamburger .lines:before,
-.hamburger .lines:after {
-  content: '';
-  position: absolute;
-  top: -5px;
-  width: 100%;
-  height: 2px;
-  background: inherit;
-  z-index: 1;
-}
-.hamburger .lines:after {
-  top: 5px;
-}
-.hamburger-wrapper .menu-toggle:checked + .hamburger .lines {
-  transform: rotate(135deg);
-}
-.hamburger-wrapper .menu-toggle:checked + .hamburger .lines:before,
-.hamburger-wrapper .menu-toggle:checked + .hamburger .lines:after {
-  top: 0;
-  transform: rotate(90deg);
-}
 main {
   display: flex;
   flex-direction: column;
 }
-.header-img {
-  text-align: right;
-}
+
 .header-img img {
   max-width: 100%;
 }
@@ -178,9 +123,114 @@ footer {
   align-content: center;
   color: var(--grayish-blue);
   text-align: center;
+  margin-bottom: 2rem;
 }
-
-
+/* MOBILE MENU STYLES */
+.hamburger-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.top-nav .menu-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+}
+.top-nav .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hamburger .lines {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: var(--very-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+.hamburger .lines:before,
+.hamburger .lines:after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+  z-index: 1;
+}
+.hamburger .lines:after {
+  top: 5px;
+}
+.hamburger-wrapper .menu-toggle:checked + .hamburger .lines {
+  transform: rotate(135deg);
+}
+.hamburger-wrapper .menu-toggle:checked + .hamburger .lines:before,
+.hamburger-wrapper .menu-toggle:checked + .hamburger .lines:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+.top-nav .mobile-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* visibility: hidden; */
+}
+.top-nav .mobile-menu {
+  width: 80%;
+}
+.top-nav .mobile-menu ul {
+  margin-top: 100px;
+  padding: 1.5rem 2rem 0 2rem;
+  text-align: center;
+  background-color: white;
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 12px hsl(230, 29%, 20%, .3);
+}
+.top-nav .mobile-menu ul li {
+  font-family: var(--secondary-font-family);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  color: var(--very-dark-blue);
+  /* display: inline-block; */
+}
+.top-nav .mobile-menu ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: var(--dark-grayish-blue);
+  text-decoration: none;
+  padding: 1rem 25vw;
+}
+.top-nav .mobile-menu ul li:last-child {
+  padding: 1.5rem 0;
+  margin-top: 1.5rem;
+  border-top: solid 1px var(--light-grayish-blue);
+}
+.top-nav .mobile-menu ul li:last-child a {
+  color: var(--grayish-blue)
+}
 
 @media all and (min-width: 769px){
   .hamburger-wrapper {

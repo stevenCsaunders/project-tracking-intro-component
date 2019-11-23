@@ -29,6 +29,7 @@ ul {
   margin: 0;
 }
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -126,15 +127,11 @@ footer {
   margin-bottom: 2rem;
 }
 /* MOBILE MENU STYLES */
-.hamburger-wrapper {
-  position: relative;
-  width: 40px;
-  height: 40px;
-}
+
 .top-nav .menu-toggle {
   position: absolute;
-  right: 0;
   top: 0;
+  right: 0;
   z-index: 2;
   cursor: pointer;
   width: 40px;
@@ -142,9 +139,8 @@ footer {
   opacity: 0;
 }
 .top-nav .hamburger {
-  position: absolute;
+  position: relative;
   top: 0;
-  right: 0;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -161,7 +157,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
 }
 .hamburger .lines:before,
 .hamburger .lines:after {
@@ -176,11 +172,11 @@ footer {
 .hamburger .lines:after {
   top: 5px;
 }
-.hamburger-wrapper .menu-toggle:checked + .hamburger .lines {
+.menu-toggle:checked + .hamburger .lines {
   transform: rotate(135deg);
 }
-.hamburger-wrapper .menu-toggle:checked + .hamburger .lines:before,
-.hamburger-wrapper .menu-toggle:checked + .hamburger .lines:after {
+.menu-toggle:checked + .hamburger .lines:before,
+.menu-toggle:checked + .hamburger .lines:after {
   top: 0;
   transform: rotate(90deg);
 }
@@ -192,10 +188,12 @@ footer {
   height: 100%;
   display: flex;
   justify-content: center;
-  /* visibility: hidden; */
 }
 .top-nav .mobile-menu {
   width: 80%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .4s ease;
 }
 .top-nav .mobile-menu ul {
   margin-top: 100px;
@@ -213,7 +211,6 @@ footer {
   letter-spacing: .1rem;
   text-transform: uppercase;
   color: var(--very-dark-blue);
-  /* display: inline-block; */
 }
 .top-nav .mobile-menu ul li a {
   display: block;
@@ -229,8 +226,13 @@ footer {
   border-top: solid 1px var(--light-grayish-blue);
 }
 .top-nav .mobile-menu ul li:last-child a {
-  color: var(--grayish-blue)
+  color: var(--grayish-blue);
 }
+.top-nav .menu-toggle:checked ~ .mobile-menu-wrapper .mobile-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 @media all and (min-width: 769px){
   .hamburger-wrapper {

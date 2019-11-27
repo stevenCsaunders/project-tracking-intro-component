@@ -33,7 +33,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 75px;
-  padding: 1rem 3rem;
+  padding: 1rem 10vw;
   margin: 0 0 3rem 0;
 }
 
@@ -50,8 +50,8 @@ header {
   z-index: -1;
 }
 .logo img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 main {
   display: flex;
@@ -59,7 +59,7 @@ main {
 }
 
 .header-img img {
-  max-width: 100%;
+  width: 100%;
 }
 .content { 
   margin-top: 7rem;
@@ -252,10 +252,49 @@ footer {
 }
 
 @media all and (min-width: 769px){
-  .hamburger-wrapper {
+  .header {
+    margin: 0 10vw;
+  }
+  .top-nav .hamburger, .top-nav .menu-toggle {
     display: none;
   }
-  .header {
-    padding-top: 10px;
+  .top-nav .mobile-menu-wrapper {
+    position: relative;
+
   }
+  .top-nav .mobile-menu {
+    visibility: visible;
+    opacity: 1;
+  }
+  .top-nav .mobile-menu ul {
+    margin-top: 0;
+    padding: 1.5rem 2rem 0 2rem;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+  }
+  .top-nav .mobile-menu ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+    padding: 1rem 2rem;
+  }
+  .top-nav .mobile-menu ul li:last-child {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  .dot {
+    height: 5px;
+    width: 5px;
+    background-color: var(--grayish-blue);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1.5rem 3rem;
+  }
+
 }

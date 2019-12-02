@@ -32,9 +32,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 75px;
-  padding: 1rem 10vw;
-  margin: 0 0 3rem 0;
+  height: 7.5rem;
+  margin: 3vw 10vw;
 }
 
 /* MOBILE STYLES */
@@ -45,7 +44,7 @@ header {
   right: 0;
   width: 50%;
   height: 110vw;
-  max-height: 700px;
+  max-height: 70rem;
   border-bottom-left-radius: 5rem;
   z-index: -1;
 }
@@ -62,8 +61,7 @@ main {
   width: 100%;
 }
 .content { 
-  margin-top: 7rem;
-  padding: 0 3rem;
+  margin: 10vw;
 }
 .content h1 {
   color: var(--grayish-blue);
@@ -116,6 +114,7 @@ main {
   border-radius: 5px;
   margin-right: 1rem;
   font-weight: 700;
+  opacity: 1;
 }
 footer {
   display: flex;
@@ -123,7 +122,7 @@ footer {
   align-content: center;
   color: var(--grayish-blue);
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 5vw;
 }
 /* MOBILE MENU STYLES */
 .top-nav .menu-toggle {
@@ -225,7 +224,7 @@ footer {
   opacity: 1;
 }
 
-@media all and (max-width: 320px){
+@media all and (max-width: 370px){
   .content {
     display: flex;
     flex-direction: column;
@@ -251,9 +250,10 @@ footer {
   }
 }
 
-@media all and (min-width: 769px){
-  .header {
-    margin: 0 10vw;
+@media all and (min-width: 700px) {
+  .background-shape {
+    width: 50%;
+    height: 40vw;
   }
   .top-nav .hamburger, .top-nav .menu-toggle {
     display: none;
@@ -276,12 +276,11 @@ footer {
     display: flex;
   }
   .top-nav .mobile-menu ul li a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: var(--dark-grayish-blue);
-    text-decoration: none;
     padding: 1rem 2rem;
+  }
+  .top-nav .mobile-menu ul li a:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
   .top-nav .mobile-menu ul li:last-child {
     padding: 0;
@@ -296,5 +295,39 @@ footer {
     display: inline-block;
     margin: 1.5rem 3rem;
   }
+  main {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .background-shape {
+    max-height: 500px;
+  }
+main .content {
+  margin: 3vw 10vw;
+}
+.demo p a:hover {
+  opacity: 0.75;
+  transition: opacity 1s;
+}
+.demo p a:not( :hover ) {
+  opacity: 1;
+  transition: opacity 1s;
+}
 
+}
+@media all and (min-width: 700px) and (max-width: 836px) {
+  .content h1 {
+    letter-spacing: .2rem;
+  }
+  .demo p {
+    display: flex;
+    flex-direction: column;
+  }
+  .demo p a {
+    margin-bottom: 1rem;
+    margin-right: 0;
+    width: 60%;
+    text-align: center;
+  }
+  };
 }

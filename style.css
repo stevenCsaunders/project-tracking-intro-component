@@ -253,7 +253,8 @@ footer {
 @media all and (min-width: 700px) {
   .background-shape {
     width: 50%;
-    height: 40vw;
+    height: 38vw;
+    max-height: 500px
   }
   .top-nav .hamburger, .top-nav .menu-toggle {
     display: none;
@@ -298,9 +299,6 @@ footer {
   main {
     flex-direction: row-reverse;
     justify-content: space-between;
-  }
-  .background-shape {
-    max-height: 500px;
   }
 main .content {
   margin: 3vw 10vw;

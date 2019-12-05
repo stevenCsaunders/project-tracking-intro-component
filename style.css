@@ -252,8 +252,8 @@ footer {
 
 @media all and (min-width: 700px) {
   .background-shape {
-    width: 50%;
-    height: 38vw;
+    width: 50vw;
+    height: 30vw;
     max-height: 500px
   }
   .top-nav .hamburger, .top-nav .menu-toggle {
@@ -269,7 +269,7 @@ footer {
   }
   .top-nav .mobile-menu ul {
     margin-top: 0;
-    padding: 1.5rem 2rem 0 2rem;
+    padding: 0 2rem;
     list-style: none;
     background-color: transparent;
     border-radius: 0;
@@ -287,14 +287,18 @@ footer {
     padding: 0;
     margin: 0;
     border: none;
+    position: relative;
   }
-  .dot {
+  .top-nav .mobile-menu ul li:last-child::before {
+    content: "";
     height: 5px;
     width: 5px;
     background-color: var(--grayish-blue);
     border-radius: 50%;
     display: inline-block;
-    margin: 1.5rem 3rem;
+    margin: 1.5rem 0;
+    position: absolute;
+    left: 0;
   }
   main {
     flex-direction: row-reverse;

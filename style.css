@@ -284,8 +284,8 @@ footer {
     text-decoration: underline;
   }
   .top-nav .mobile-menu ul li:last-child {
-    padding: 0;
-    margin: 0;
+    padding: 0 1rem;
+    margin: 0 1rem;
     border: none;
     position: relative;
   }

@@ -1,0 +1,33 @@
+@import '../00-settings/_settings'
+
+h1, h2
+	font-family: $secondaryFontFamily
+
+ul
+	padding: 0
+	margin: 0
+header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 7.5rem
+	margin: 3vw 10vw
+
+main
+	display: flex
+	flex-direction: column
+
+footer
+	display: flex
+	justify-content: center
+	align-content: center
+	color: $grayishBlue
+	text-align: center
+	margin: 5vw
+
+@media all and (min-width: 700px)
+	main
+		flex-direction: row-reverse
+		justify-content: space-between
+		.content
+			margin: 3vw 10vw

@@ -1,4 +1,12 @@
-@mixin flexBasic($display: null, $justifyContent: null, $alignItems: null)
-	display: $display
+@import '../00-settings/_settings'
+
+@mixin flexBasic($justifyContent: center, $alignItems: center)
+	display: flex
 	justify-content: $justifyContent
 	align-items: $alignItems
+
+@mixin fontBasic($family: $mainFontFamily, $size: 1rem, $weight: 400, $color: $grayishBlue)
+	font-family: $family
+	font-size: $size
+	font-weight: $weight
+	color: $color

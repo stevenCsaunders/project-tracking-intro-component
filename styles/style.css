@@ -175,11 +175,11 @@ ul {
 }
 
 header {
+  height: 7.5rem;
+  margin: 3vw 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 7.5rem;
-  margin: 3vw 10vw;
 }
 
 main {
@@ -188,12 +188,12 @@ main {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-content: center;
   color: #a0a1ac;
   text-align: center;
   margin: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media all and (min-width: 700px) {
@@ -230,25 +230,30 @@ footer {
   margin: 10vw;
 }
 .content h1 {
-  color: #a0a1ac;
-  font-family: "Barlow", sans-serif;
-  font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  font-weight: 400;
   margin: 0;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #a0a1ac;
 }
 .content h2 {
-  color: #242942;
   text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 700;
   margin: 1.5rem 0;
   line-height: 4rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #242942;
 }
 .content h3 {
   font-family: "Barlow", sans-serif;
   font-size: 2rem;
+  color: #5b5f71;
+  font-family: "Barlow", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
   color: #5b5f71;
 }
 

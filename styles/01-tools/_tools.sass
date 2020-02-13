@@ -10,3 +10,27 @@
 	font-size: $size
 	font-weight: $weight
 	color: $color
+
+@mixin for-smphone-only
+	@media (max-width: 399px)
+		@content
+
+@mixin for-phone-up
+	@media all and(min-width: 400px)
+		@content
+
+@mixin for-tablet-portrait-up
+	@media all and(min-width: 700px)
+		@content
+
+@mixin for-tablet-landscape-up
+	@media all and(min-width: 900px)
+		@content
+
+@mixin for-desktop-up
+	@media all and(min-width: 1200px)
+		@content
+
+@mixin for-big-desktop-up
+	@media all and(min-width: 1800px)
+		@content

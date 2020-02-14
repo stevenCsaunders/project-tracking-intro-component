@@ -2,11 +2,13 @@
 @import '../01-tools/_tools'
 
 h1
+	display: flex
+	flex-direction: row
 	text-transform: uppercase
-	letter-spacing: 0.3rem
+	letter-spacing: 0.2rem
 	line-height: 2.4rem
-	margin: 0
-	@include fontBasic($size: 1.5rem)
+	margin-right: 0
+	@include fontBasic($size: 1.2rem)
 
 h2
 	text-transform: uppercase
@@ -41,8 +43,7 @@ footer
 
 @include for-phone-up
 	h1
-		display: flex
-		flex-direction: row
+
 		justify-content: start
 		font-size: 1.25rem
 		letter-spacing: .3rem

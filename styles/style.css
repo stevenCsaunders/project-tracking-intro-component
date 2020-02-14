@@ -166,12 +166,14 @@ template {
 }
 
 h1 {
+  display: flex;
+  flex-direction: row;
   text-transform: uppercase;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   line-height: 2.4rem;
-  margin: 0;
+  margin-right: 0;
   font-family: "Barlow", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #a0a1ac;
 }
@@ -225,8 +227,6 @@ footer {
 
 @media all and (min-width: 400px) {
   h1 {
-    display: flex;
-    flex-direction: row;
     justify-content: start;
     font-size: 1.25rem;
     letter-spacing: 0.3rem;
@@ -255,12 +255,17 @@ footer {
   height: 30px;
 }
 
+.header-img {
+  margin-top: 3vw;
+}
+
 .header-img img {
   width: 100%;
 }
 
 .content {
-  margin: 10vw;
+  margin: 5vw 0 0 7.5vw;
+  padding-right: 3vw;
   display: flex;
   flex-direction: column;
   align-content: start;
@@ -269,19 +274,19 @@ footer {
 .highlight {
   display: flex;
   justify-content: center;
-  width: 7.5rem;
+  width: 7rem;
   padding: 0.25rem 1rem;
   background-color: #242942;
   color: #fff;
   letter-spacing: 0.1rem;
   border-radius: 15px;
   font-weight: 700;
+  margin-right: 1rem;
 }
 
 .demo {
   margin: 1rem 0;
   display: flex;
-  flex-direction: column;
 }
 .demo p {
   color: #a0a1ac;
@@ -294,6 +299,7 @@ footer {
 }
 .demo p a {
   padding: 1.25rem 1rem;
+  margin-right: 1rem;
   background-color: #ff5c5c;
   color: #fff;
   text-decoration: none;
@@ -431,13 +437,13 @@ footer {
 }
 @media all and (min-width: 700px) {
   .background-shape {
-    width: 50vw;
+    width: 45vw;
     height: 30vw;
-    max-height: 500px;
+    max-height: 350px;
   }
 
   .content {
-    margin: 3vw 3vw 3vw 10vw;
+    margin-left: 10vw;
   }
 
   .demo p {
@@ -471,6 +477,11 @@ footer {
   }
 }
 @media all and (min-width: 900px) {
+  .content {
+    margin-left: 10vw;
+    padding-right: 5rem;
+  }
+
   .top-nav .hamburger, .top-nav .menu-toggle {
     display: none;
   }
@@ -517,6 +528,12 @@ footer {
     position: absolute;
     left: 0;
     margin-top: 1rem;
+  }
+}
+@media all and (min-width: 1200px) {
+  .content {
+    margin-left: 10vw;
+    padding-right: 5rem;
   }
 }
 

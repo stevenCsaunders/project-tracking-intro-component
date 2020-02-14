@@ -168,12 +168,12 @@ template {
 h1 {
   display: flex;
   flex-direction: row;
+  align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  line-height: 2.4rem;
   margin-right: 0;
-  font-family: "Barlow", sans-serif;
-  font-size: 1.2rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2rem;
   font-weight: 400;
   color: #a0a1ac;
 }
@@ -182,7 +182,7 @@ h2 {
   text-transform: uppercase;
   margin: 1.5rem 0;
   line-height: 4rem;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-size: 4rem;
   font-weight: 700;
   color: #242942;
@@ -225,8 +225,7 @@ footer {
 @media all and (min-width: 400px) {
   h1 {
     justify-content: start;
-    align-items: center;
-    font-size: 1.25rem;
+    font-size: 2rem;
     letter-spacing: 0.3rem;
   }
 }
@@ -539,16 +538,16 @@ footer {
     display: inline-block;
     position: absolute;
     left: 0;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
   }
 }
 @media all and (min-width: 1200px) {
   .top-nav .mobile-menu ul li {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
 
   .top-nav .mobile-menu ul li:last-child::before {
-    margin-top: 1.35rem;
+    margin-top: 1.5rem;
   }
 
   .content {
@@ -558,11 +557,11 @@ footer {
 }
 @media all and (min-width: 1800px) {
   .top-nav .mobile-menu ul li {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .top-nav .mobile-menu ul li:last-child::before {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   .highlight {

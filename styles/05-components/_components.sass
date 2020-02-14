@@ -1,4 +1,5 @@
 @import '../00-settings/_settings'
+@import '../01-tools/_tools'
 
 .background-shape
 	background-color: $lightGrayishBlue
@@ -32,7 +33,7 @@
 	display: flex
 	justify-content: center
 	width: 7rem
-	padding: 0.25rem 1rem
+	padding: .25rem 1rem
 	background-color: $veryDarkBlue
 	color: #fff
 	letter-spacing: 0.1rem
@@ -43,24 +44,25 @@
 .demo
 	margin: 1rem 0
 	display: flex
-	p
-		color: $grayishBlue
-		font-family: $secondaryFontFamily
-		font-size: 1rem
-		text-transform: uppercase
-		letter-spacing: 0.2rem
-		line-height: 1
-		font-weight: 400
-		a
-			padding: 1.25rem 1rem
-			margin-right: 1rem
-			background-color: $primaryRed
-			color: #fff
-			text-decoration: none
-			letter-spacing: 0.1rem
-			border-radius: 5px
-			font-weight: 700
-			opacity: 1
+	align-items: center
+	font-size: 1rem
+	color: $grayishBlue
+	font-family: $secondaryFontFamily
+	text-transform: uppercase
+	letter-spacing: 0.2rem
+	line-height: 1
+	font-weight: 400
+	a
+		display: flex
+		justify-content: center
+		padding: 1.25rem 1rem
+		margin-right: 1rem
+		background-color: $primaryRed
+		color: #fff
+		text-decoration: none
+		border-radius: 5px
+		font-weight: 700
+		opacity: 1
 
 .top-nav
 	.menu-toggle
@@ -133,7 +135,7 @@
 .top-nav .mobile-menu ul li
 	font-family: $secondaryFontFamily
 	font-weight: 700
-	font-size: 1.2rem
+	// font-size: 1.2rem
 	letter-spacing: 0.1rem
 	text-transform: uppercase
 
@@ -180,23 +182,22 @@
 		margin-left: 10vw
 
 	.demo
-		p
-			color: $grayishBlue
-			font-family: $secondaryFontFamily
-			font-size: 1rem
-			text-transform: uppercase
-			letter-spacing: 0.2rem
-			line-height: 1
-			font-weight: 400
-			a
-				padding: 1.25rem 1rem
-				background-color: $primaryRed
-				color: #fff
-				text-decoration: none
-				letter-spacing: 0.1rem
-				border-radius: 5px
-				font-weight: 700
-				opacity: 1
+		color: $grayishBlue
+		font-family: $secondaryFontFamily
+		font-size: 1rem
+		text-transform: uppercase
+		letter-spacing: 0.2rem
+		line-height: 1
+		font-weight: 400
+		a
+			padding: 1.25rem 1rem
+			background-color: $primaryRed
+			color: #fff
+			text-decoration: none
+			letter-spacing: 0.1rem
+			border-radius: 5px
+			font-weight: 700
+			opacity: 1
 
 	.demo p a:hover
 		opacity: 0.75
@@ -256,3 +257,19 @@
 	.content
 		margin-left: 10vw
 		padding-right: 5rem
+
+@include for-big-desktop-up
+	.top-nav .mobile-menu ul li
+		font-size: 1.5rem
+
+	.top-nav .mobile-menu ul li:last-child::before
+		margin-top: 1.5rem
+
+	.highlight
+		padding: .75rem 4rem
+
+	.demo
+		p
+			font-size: 2rem
+			a
+				padding: 1rem 2rem

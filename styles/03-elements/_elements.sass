@@ -17,9 +17,6 @@ h2
 	@include fontBasic($size: 4rem, $weight: 700, $color: $veryDarkBlue)
 
 h3
-	font-family: $mainFontFamily
-	font-size: 2rem
-	color: $darkGrayishBlue
 	@include fontBasic($size: 2rem, $color: $darkGrayishBlue)
 
 ul
@@ -29,7 +26,7 @@ ul
 header
 	height: 7.5rem
 	margin: 3vw 10vw
-	@include flexBasic(space-between, center)
+	@include flexBasic(space-between)
 
 main
 	display: flex
@@ -39,12 +36,13 @@ footer
 	color: $grayishBlue
 	text-align: center
 	margin: 5vw
-	@include flexBasic(center, center)
+	@include flexBasic()
 
 @include for-phone-up
 	h1
 
 		justify-content: start
+		align-items: center
 		font-size: 1.25rem
 		letter-spacing: .3rem
 
@@ -52,3 +50,14 @@ footer
 	main
 		flex-direction: row-reverse
 		justify-content: space-between
+
+@include for-big-desktop-up
+	h1
+		font-size: 2rem
+		letter-spacing: 1rem
+
+	h2
+		font-size: 5rem
+
+	h3
+		font-size: 3rem

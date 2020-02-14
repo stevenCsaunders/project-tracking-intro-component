@@ -191,9 +191,6 @@ h2 {
 h3 {
   font-family: "Barlow", sans-serif;
   font-size: 2rem;
-  color: #5b5f71;
-  font-family: "Barlow", sans-serif;
-  font-size: 2rem;
   font-weight: 400;
   color: #5b5f71;
 }
@@ -228,6 +225,7 @@ footer {
 @media all and (min-width: 400px) {
   h1 {
     justify-content: start;
+    align-items: center;
     font-size: 1.25rem;
     letter-spacing: 0.3rem;
   }
@@ -236,6 +234,20 @@ footer {
   main {
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+}
+@media all and (min-width: 1800px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  h3 {
+    font-size: 3rem;
   }
 }
 .background-shape {
@@ -287,23 +299,23 @@ footer {
 .demo {
   margin: 1rem 0;
   display: flex;
-}
-.demo p {
+  align-items: center;
+  font-size: 1rem;
   color: #a0a1ac;
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   line-height: 1;
   font-weight: 400;
 }
-.demo p a {
+.demo a {
+  display: flex;
+  justify-content: center;
   padding: 1.25rem 1rem;
   margin-right: 1rem;
   background-color: #ff5c5c;
   color: #fff;
   text-decoration: none;
-  letter-spacing: 0.1rem;
   border-radius: 5px;
   font-weight: 700;
   opacity: 1;
@@ -389,7 +401,6 @@ footer {
 .top-nav .mobile-menu ul li {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
-  font-size: 1.2rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
@@ -446,7 +457,7 @@ footer {
     margin-left: 10vw;
   }
 
-  .demo p {
+  .demo {
     color: #a0a1ac;
     font-family: "Barlow Condensed", sans-serif;
     font-size: 1rem;
@@ -455,7 +466,7 @@ footer {
     line-height: 1;
     font-weight: 400;
   }
-  .demo p a {
+  .demo a {
     padding: 1.25rem 1rem;
     background-color: #ff5c5c;
     color: #fff;
@@ -534,6 +545,26 @@ footer {
   .content {
     margin-left: 10vw;
     padding-right: 5rem;
+  }
+}
+@media all and (min-width: 1800px) {
+  .top-nav .mobile-menu ul li {
+    font-size: 1.5rem;
+  }
+
+  .top-nav .mobile-menu ul li:last-child::before {
+    margin-top: 1.5rem;
+  }
+
+  .highlight {
+    padding: 0.75rem 4rem;
+  }
+
+  .demo p {
+    font-size: 2rem;
+  }
+  .demo p a {
+    padding: 1rem 2rem;
   }
 }
 

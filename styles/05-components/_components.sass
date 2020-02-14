@@ -112,9 +112,9 @@
 
 .top-nav .mobile-menu
 	width: 80%
-	visibility: hidden
 	opacity: 0
-	transition: all 0.4s ease
+	pointer-events: none
+	transition: opacity 0.4s ease
 
 .top-nav .mobile-menu ul
 	margin-top: 100px
@@ -172,7 +172,26 @@
 		max-height: 500px
 
 	.content
-		margin: 3vw 10vw
+		margin: 3vw 3vw 3vw 10vw
+
+	.demo
+		p
+			color: $grayishBlue
+			font-family: $secondaryFontFamily
+			font-size: 1rem
+			text-transform: uppercase
+			letter-spacing: 0.2rem
+			line-height: 1
+			font-weight: 400
+			a
+				padding: 1.25rem 1rem
+				background-color: $primaryRed
+				color: #fff
+				text-decoration: none
+				letter-spacing: 0.1rem
+				border-radius: 5px
+				font-weight: 700
+				opacity: 1
 
 	.demo p a:hover
 		opacity: 0.75
@@ -190,8 +209,8 @@
 		.mobile-menu-wrapper
 			position: relative
 		.mobile-menu
-			visibility: visible
 			opacity: 1
+			pointer-events: all
 			ul
 				margin-top: 0
 				padding: 0 2rem
